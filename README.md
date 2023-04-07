@@ -6,7 +6,7 @@
 - Đỗ Đình Quý - 21011627 
 ## Mô tả dự án
 
-	Để chạy dự án, bạn cần install SQLite (database)và python3, framework Django. Theo list video hướng dẫn của tác giả nhóm howKteam,  trong link dưới đây
+	Để chạy dự án, bạn cần install SQLite (database)và python3, framework Django. Theo danh sách video hướng dẫn của tác giả nhóm howKteam,  trong link dưới đây
 	url Python3: https://www.xda-developers.com/how-to-install-python/
 	url SQLite: https://www.servermania.com/kb/articles/install-sqlite/
 	url Django: https://www.youtube.com/watch?v=VF0oC9mkkno&list=PL33lvabfss1z8GYxjyMulCnhcYGk5ah8P&index=1
