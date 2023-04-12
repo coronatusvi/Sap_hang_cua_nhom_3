@@ -1,4 +1,4 @@
-# Phân tích điểm thi  
+# Sạp hàng truyền thống chuyển mô hình kinh doanh   
 ## Thông tin thành viên:  
 - Vi Đăng Quang - 21010583 
 - Nguyễn Nam Hải - 21012056   
