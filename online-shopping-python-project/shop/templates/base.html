@@ -11,8 +11,11 @@
     <title>{% block title %} {% endblock %}</title>
     <style>
         .navbar {
-            background-color: #f84e11;
+            background-color: green;
             top: 10px;
+            margin: 0 1rem;
+            box-sizing: border-box;
+            border-radius: 30px;
         }
 
         body {
@@ -31,8 +34,8 @@
         .box-element {
             box-shadow: hsl(0, 0%, 80%) 0 0 16px;
             background-color: #fff;
-            border-radius: 4px;
-            padding: 10px;
+            border-radius: 10px;
+            padding: 5% 10%;
         }
 
         .thumbnail {
@@ -87,8 +90,6 @@
             display: inline-block;
             font-weight: 700;
             padding-right: 10px;
-
-
         }
 
         .chg-quantity {
@@ -116,10 +117,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Sạp hàng của nhóm 3</a>
+            <a class="navbar-brand" href="/"style="font-family:cursive">Sạp hàng của nhóm 3 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation" style="margin-right: 10px">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -164,9 +165,9 @@
                     {% endif %}
                 </ul>
                 </div>
-                <form class="d-flex" method="POST" action="/search/"> {% csrf_token %}
-                    <input class="form-control me-2" type="search" name="search" placeholder="Search Product" aria-label="Search">
-                    <button href="/search/" class="btn btn-secondary" type="submit">Tìm kiếm</button>
+                <form class="d-flex" method="POST" action="/search/" style="height: 3rem;"> {% csrf_token %}
+                    <input class="form-control me-2" type="search" name="search" placeholder="Search Product" aria-label="Search" style="border-radius: 1rem;">
+                    <button href="/search/" class="btn btn-secondary" type="submit" style="width: 10rem; border-radius: 1rem; background-color: rgb(89, 222, 89); color: black;";">Tìm kiếm</button>
                 </form>
             </div>
         </div>

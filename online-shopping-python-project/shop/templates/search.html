@@ -22,7 +22,7 @@
                   {% else %}
                   <button class="btn" style="background-color: #8c5d4f; color: white;">Đăng nhập thể thêm vào giỏ hàng</button>
                   {% endif %}
-                  <h4 style="display: inline-block; float: right;">₹{{product.price}}</h4>
+                  <h4 style="display: inline-block; float: right;">{{product.price}} VNĐ</h4>
                 </div>
               </div>
         </div>
@@ -30,6 +30,6 @@
     </div>
 </div>
 {% else %}
-<h1>Sản phẩm hiện hết hàng hoặc không có trong danh mục bạn tìm kiếm</h1>
+  <h2 style="line-height: 50px; padding: 4rem;">Sản phẩm hiện hết hàng hoặc không có trong danh mục bạn tìm kiếm</h2>
 {% endif %}
 {% endblock %}

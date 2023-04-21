@@ -11,18 +11,18 @@
     <div class="row">
         <div class="form-group col-md-12">
             <label>Họ và tên</label>
-            <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Enter Full Name" required>
+            <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Enter full name" required>
         </div>
     </div>
 
     <div class="row mt-4">
         <div class="form-group col-md-6">
             <label>Email Id</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email Id" required>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email ID" required>
         </div>
         <div class="form-group col-md-6">
             <label>Liên hệ</label>
-            <input type="tel" class="form-control" name="phone_number" id="phone_number" placeholder="Enter Contact Number" required>
+            <input type="tel" class="form-control" name="phone_number" id="phone_number" placeholder="Enter contact number" required>
         </div>
     </div>
 
@@ -45,15 +45,15 @@
     </div>
 
 
-    <input type="submit" value="Submit" class="btn mt-4" style="background-color: #8c5d4f; color: white; font-size: larger; width: 9rem;">
+    <input type="submit" value="Submit" class="btn mt-4" style="background-color: #207200; color: white; font-size: larger; width: 9rem;">
 </form>
 {% endblock %}
 {% block js %}
 <script>
-{% if alert %}
-alert("Passwords do not match each other");
-document.location = "/register"
-{% endif %}
+    {% if alert %}
+    alert("Passwords do not match each other");
+    document.location = "/register"
+    {% endif %}
 </script>
 {% endblock %}
 

@@ -9,18 +9,14 @@
 
   <div class="row">
     {% for product in products %}
-    <div class="col-lg-4 my-4">
-      <div class="card shadow align-items-center" style="width: 20rem; height: 25rem;">
-        <img src="/media/{{product.image}}" class="card-img-top" style="width: 170px; height: 260px;" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{product.name}}</h5>
-          <hr>
+    <div class="col-lg-4 my-4" style=" display:flex;justify-content: center;">
+      <div class="card shadow align-items-center" style="width: 18rem;box-sizing: border-box;border-radius: 30px;padding: 5%;">
+        <img src="/media/{{product.image}}" class="card-img-top" style="width: 70%; height: 70%; " alt="...">
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <h5 class="card-title" style="display: flex; justify-content: center;">{{product.name}}</h5>
           {% if request.user.is_authenticated %}
-          <button data-product="{{product.id}}" data-action="add" class="btn add-btn update-cart"
-            style="background-color: #8c5d4f; color: white;">Thêm thẻ ngân hàng</button>
-          <a href="/product_view/{{product.id}}/" class="btn btn-outline-secondary">View</a>
+          <a href="/product_view/{{product.id}}/" class="btn btn-outline-secondary" style="border-radius: 10px; width: 100%; display: flex; justify-content: center;">View</a>
           {% else %}
-          <button class="btn" style="background-color: #8c5d4f; color: white;">Đăng nhập để vào giỏ hàng</button>
           {% endif %}
           <h4 style="display: inline-block; float: right;">&nbsp;{{product.price}} VNĐ</h4>
         </div>
