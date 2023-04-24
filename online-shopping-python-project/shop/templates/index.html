@@ -19,7 +19,7 @@
           {% if request.user.is_authenticated %}
           {% else %}
           {% endif %}
-          <h4 style="display: inline-block; float: right;">&nbsp;{{product.price}} VNĐ</h4>
+          <h4 style="display: inline-block; float: right;">&nbsp;{{product.formatted_price}}</h4>
         </div>
       </div>
     </div>

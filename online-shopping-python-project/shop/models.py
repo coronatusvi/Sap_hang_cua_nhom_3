@@ -11,6 +11,15 @@ class Customer(models.Model):
     def __str__(self):
         return str(self.user)
 
+# class Product(models.Model):
+#     name = models.CharField(max_length=100)
+#     price = models.FloatField()
+#     image = models.ImageField(upload_to="images", default="")
+
+#     def __str__(self):
+#         return self.name
+import locale
+
 class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.FloatField()
@@ -19,6 +28,10 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    def formatted_price(self):
+        locale.setlocale(locale.LC_ALL, 'vi_VN.UTF-8')
+        return locale.currency(self.price, grouping=True)
+    
 class Feature(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     feature = models.CharField(max_length=1000, null=True, blank=True)
