@@ -11,11 +11,12 @@
     {% for product in products %}
     <div class="col-lg-4 my-4" style=" display:flex;justify-content: center;">
       <div class="card shadow align-items-center" style="width: 18rem;box-sizing: border-box;border-radius: 30px;padding: 5%;">
-        <img src="/media/{{product.image}}" class="card-img-top" style="width: 70%; height: 70%; " alt="...">
+        <a href="/product_view/{{product.id}}/" >
+          <img src="/media/{{product.image}}" class="card-img-top" style="width: 175px; height: 175px; " alt="...">
+        </a>
         <div class="card-body" style="display: flex; flex-direction: column;">
           <h5 class="card-title" style="display: flex; justify-content: center;">{{product.name}}</h5>
           {% if request.user.is_authenticated %}
-          <a href="/product_view/{{product.id}}/" class="btn btn-outline-secondary" style="border-radius: 10px; width: 100%; display: flex; justify-content: center;">View</a>
           {% else %}
           {% endif %}
           <h4 style="display: inline-block; float: right;">&nbsp;{{product.price}} VNĐ</h4>

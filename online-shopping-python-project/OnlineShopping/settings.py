@@ -17,7 +17,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '38e5-2a09-bac5-d45d-16d2-00-246-8e.ngrok-free.app',
+    '2ea4-2a09-bac5-d459-16c8-00-245-1a.ngrok-free.app',
 ]
 
 
@@ -120,3 +120,4 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+

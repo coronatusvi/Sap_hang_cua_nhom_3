@@ -11,7 +11,6 @@ urlpatterns = [
     path("tracker/", views.tracker, name="tracker"),
     path("contact/", views.contact, name="contact"),
     path("loggedin_contact/", views.loggedin_contact, name="loggedin_contact"),
-
     path("register/", views.register, name="register"),
     path("change_password/", views.change_password, name="change_password"),
     path("login/", views.Login, name="login"),

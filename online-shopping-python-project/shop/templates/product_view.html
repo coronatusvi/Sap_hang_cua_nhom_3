@@ -10,7 +10,7 @@
     <div class="row">
     <div class="col-md-4" style="display: flex; justify-content: center;">
     <div class="row">
-<img src="/media/{{product.image}}" alt="" style="width: 300px; height: 400px;">
+<img src="/media/{{product.image}}" alt="" style="width: 300px; height: 300px;">
     </div>
     <br>
     <div class="row"></div>
@@ -19,7 +19,7 @@
     <h3>{{product.name}}</h3>
     <p style="font-size: 25px;"><b>{{product.price}} VNĐ</b></p>
     <br>
-    <ul>
+    <ul style="color: rgb(253, 253, 253); background-color: rgba(48, 41, 1, 0.452); border-radius: 15px;">
         {% for i in feature %}
         <li>{{i.feature}}</li>
         {% endfor %}
@@ -38,7 +38,7 @@
 </div>
 </div>
 <div class="container mt-2">
-          <h2>Đánh giá sản phẩm ({{reviews.count}})</h2>
+          <h2 style="color: azure;">Đánh giá sản phẩm ({{reviews.count}})</h2>
           
           {% for review in reviews %}
           <div class="card">
