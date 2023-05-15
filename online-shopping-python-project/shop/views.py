@@ -199,28 +199,6 @@ def tracker(request):
     return render(request, "tracker.html", {'cartItems':cartItems})
 
 
-# def register(request):
-#     if request.user.is_authenticated:
-#         return redirect("")
-#     else:
-#         if request.method=="POST":   
-#             username = request.POST['username']
-#             full_name=request.POST['full_name']
-#             password1 = request.POST['password1']
-#             password2 = request.POST['password2']
-#             phone_number = request.POST['phone_number']
-#             email = request.POST['email']
-
-#             if password1 != password2:
-#                 alert = True
-#                 return render(request, "register.html", {'alert':alert})
-            
-#             user = User.objects.create_user(username=username, password=password1, email=email)
-#             customers = Customer.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
-#             user.save()
-#             customers.save()
-#             return render(request, "login.html")
-#     return render(request, "register.html")
 from django.contrib.auth import authenticate, login
 
 def register(request):
