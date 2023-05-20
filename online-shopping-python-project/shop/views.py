@@ -1,5 +1,5 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import *
 from django.http import JsonResponse
 import json
@@ -201,32 +201,66 @@ def tracker(request):
 
 from django.contrib.auth import authenticate, login
 
+# def register(request):
+#     if request.user.is_authenticated:
+#         return redirect("")
+#     else:
+#         if request.method=="POST":   
+#             username = request.POST['username']
+#             full_name=request.POST['full_name']
+#             password1 = request.POST['password1']
+#             password2 = request.POST['password2']
+#             phone_number = request.POST['phone_number']
+#             email = request.POST['email']
+
+#             if password1 != password2:
+#                 alert = True
+#                 return render(request, "register.html", {alert})
+            
+#             if User.objects.filter(username=username).exists():
+#                 return render(request, "register.html", {alert:"Vi Đăng Quang"})
+            
+#             user = authenticate(request, username=username, password=password1)
+#             if user is not None:
+#                 login(request, user)
+#                 return render(request, "register.html", {alert})
+            
+
+#             user = User.objects.create_user(username=username, password=password1, email=email)
+#             customers = Customer.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
+#             user.save()
+#             customers.save()
+
+#             return redirect('login')
+#     return render(request, "register.html")
+from django.contrib import messages
 def register(request):
+    alert = True
     if request.user.is_authenticated:
-        return redirect("")
+        return redirect("/")
     else:
-        if request.method=="POST":   
+        if request.method == "POST":   
             username = request.POST['username']
-            full_name=request.POST['full_name']
+            full_name = request.POST['full_name']
             password1 = request.POST['password1']
             password2 = request.POST['password2']
             phone_number = request.POST['phone_number']
             email = request.POST['email']
 
             if password1 != password2:
-                alert = True
-                return render(request, "register.html", {'alert':alert})
-            
+                messages.error(request, "Mật khẩu không khớp")
+                return render(request, "register.html")
+
+
+            user = authenticate(username=username, password=password1)
+            if User.objects.filter(username=username).exists():
+                return render(request, "register.html", {"alert":alert})
+
             user = User.objects.create_user(username=username, password=password1, email=email)
             customers = Customer.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
-            user.save()
             customers.save()
 
-            # Đăng nhập người dùng
-            user = authenticate(request, username=username, password=password1)
-            if user is not None:
-                login(request, user)
-
+            messages.success(request, "Đăng ký thành công!")
             return redirect('login')
     return render(request, "register.html")
 
