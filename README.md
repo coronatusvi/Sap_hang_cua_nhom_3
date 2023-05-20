@@ -1,4 +1,4 @@
-# Phi Dương
+# Sạp hàng của nhóm 3
 Sạp hàng chuyển đổi mô hình kinh doanh - second-hand
 ## Thông tin thành viên:  
 - Vi Đăng Quang - 21010583 
@@ -14,3 +14,6 @@ Sạp hàng chuyển đổi mô hình kinh doanh - second-hand
 	url Python3: https://www.xda-developers.com/how-to-install-python/
 	url SQLite: https://www.servermania.com/kb/articles/install-sqlite/
 	url Django: https://www.youtube.com/watch?v=VF0oC9mkkno&list=PL33lvabfss1z8GYxjyMulCnhcYGk5ah8P&index=1
+	
+	Cách tạo tài khoảng admin cho dự án django:
+	https://vicloud.vn/community/cach-kich-hoat-va-ket-noi-giao-dien-django-admin-556.html
