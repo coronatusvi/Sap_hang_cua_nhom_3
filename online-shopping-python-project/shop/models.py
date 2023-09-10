@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
 
+import locale
+
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
@@ -10,15 +12,6 @@ class Customer(models.Model):
 
     def __str__(self):
         return str(self.user)
-
-# class Product(models.Model):
-#     name = models.CharField(max_length=100)
-#     price = models.FloatField()
-#     image = models.ImageField(upload_to="images", default="")
-
-#     def __str__(self):
-#         return self.name
-import locale
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
